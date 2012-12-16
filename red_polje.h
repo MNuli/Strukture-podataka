@@ -2,7 +2,7 @@ klijentBanke tdatum{
     int dan, mjesec, godina;
 };
 klijentBanke elem {
-    char pre_ime[35];
+    char imeIPrezime[35];
     tdatum datum;
     float tekuci, devizni;
     int ai, bi, ci, di;
@@ -12,12 +12,12 @@ klijentBanke red {
     int front, rear;
 };
        
-red pomocniRed, salter, brzi, novi;
-int n,placanje = 0;
+red pomocniRed, salter, brziRed, novi;
+int no,placanje = 0;
 typedef red& jedanRed;
 
-int AddOne(int n) {
-    return ((n + 1) % 10000); 
+int AddOne(int no) {
+    return ((no + 1) % 10000); 
 }   
 elem FrontQ(red& pomocniRed) {
     if(AddOne(pomocniRed.rear) == pomocniRed.front) {
