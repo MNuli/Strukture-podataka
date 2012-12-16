@@ -2,7 +2,7 @@ struct tdatum{
     int dan, mjesec, godina;
 };
 struct klijentBanke {
-    char pre_ime[35];
+    char imeIPrezime[35];
     tdatum datum;
     float tekuci, devizni;
     int ai, bi, ci, di;
@@ -15,8 +15,8 @@ struct red {
     redU *front, *rear;
 };
        
-red pomocniRed, salter, brzi, novi;
-int n, placanje = 0;
+red pomocniRed, salter, brziRed, novi;
+int no, placanje = 0;
 typedef red& jedanRed;
 
 klijentBanke FrontQ(red& pomocniRed) {
